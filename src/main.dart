@@ -13,10 +13,7 @@ void guessNum(int num, int randomNum) {
 }
 
 int main() {
-  const int min = 1;
-  const int max = 100;
-  var rnd = Random();
-  var randomNum = min + rnd.nextInt(max - min);
+  final randomNum = Random().nextInt(100) + 1;
 
   stdout.write("\nEnter the number: ");
   int num = int.parse(stdin.readLineSync() ?? '0');
