@@ -1,14 +1,13 @@
-
 import 'dart:io';
 import 'dart:math';
 
 void guessNum(int num, int randomNum) {
   if (num == randomNum) {
     stdout.write('\nExactly right!\n');
-  } else if ((num - randomNum).abs() <= 20) {
-    stdout.write('\nToo high!\n');
-  } else {
-    stdout.write('\nToo low... :( \n');
+  } else if (randomNum > num) {
+    stdout.write('\nToo low...\n');
+  } else if (randomNum < num){
+    stdout.write('\nToo high... \n');
   }
 }
 
